@@ -22,14 +22,14 @@ jobs:
         # Assuming your backend is in a folder named 'habit_tracker'
         # Adjust the 'cd' command if your folder name is different
         run: |
-          cd habit_tracker
+          cd backend
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           python -m spacy download en_core_web_sm
           
       - name: Run PyTest
         run: |
-          cd habit_tracker
+          cd backend
           pytest test_nlp.py
 
   frontend-build:
