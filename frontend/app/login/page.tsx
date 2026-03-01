@@ -65,9 +65,8 @@ export default function LoginPage() {
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
             <input
-              type="email"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder:text-slate-400"
-              placeholder="you@example.com"
+             type="email" 
+             className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder:text-slate-400"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={loading}
@@ -77,7 +76,7 @@ export default function LoginPage() {
             <label className="block text-sm font-medium text-slate-700 mb-1">Password</label>
             <input
               type="password"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder:text-slate-400"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 text-slate-900 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all placeholder:text-slate-400"
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
