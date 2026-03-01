@@ -1,6 +1,6 @@
 import { HabitRecord, AuthResponse, User}  from "@/types";
 
-const API_BASE_URL = "https://habit-tracker-using-nlp-and-fastapi.onrender.com";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://habit-tracker-using-nlp-and-fastapi.onrender.com';
 
 const getToken = () =>{
     if (typeof window !== "undefined") {
@@ -11,7 +11,7 @@ const getToken = () =>{
 
 //authentication
 export const signUp = async (email: string, password: string): Promise<User> => {
-    const response = await fetch(`${API_BASE_URL}/signup/`, {
+    const response = await fetch(`${API_BASE_URL}/signup`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -28,7 +28,7 @@ export const login = async (email: string, password: string): Promise<AuthRespon
     formData.append("username", email);
     formData.append("password", password);
 
-    const response = await fetch(`${API_BASE_URL}/login/`, {
+    const response = await fetch(`${API_BASE_URL}/login`, {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
