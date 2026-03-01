@@ -49,3 +49,4 @@ fastapi
 uvicorn
 spacy
 sqlalchemy
+PyJWT
