@@ -45,3 +45,7 @@ bcrypt
 python-multipart
 pytest
 httpx
+fastapi
+uvicorn
+spacy
+sqlalchemy
