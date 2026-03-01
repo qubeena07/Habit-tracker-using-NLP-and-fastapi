@@ -1,0 +1,50 @@
+# .github/workflows/ci.yml
+name: Full Stack CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Install dependencies
+        # Assuming your backend is in a folder named 'habit_tracker'
+        # Adjust the 'cd' command if your folder name is different
+        run: |
+          cd habit_tracker
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          python -m spacy download en_core_web_sm
+          
+      - name: Run PyTest
+        run: |
+          cd habit_tracker
+          pytest test_nlp.py
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install and Build Frontend
+        # Adjust 'cd frontend' if your Next.js folder is named differently
+        run: |
+          cd frontend
+          npm install
+          npm run build
