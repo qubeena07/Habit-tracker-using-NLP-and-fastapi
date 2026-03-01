@@ -15,11 +15,11 @@ OnTrack AI is a full-stack web application that allows users to log their daily 
 ## 📸 Application Previews
 
 <div align="center">
-  <img src="./dashboard1.heic" alt="Dashboard Overview" width="800" style="border-radius: 8px; margin-bottom: 10px;" />
+  <img src="./dashboard1.jpg" alt="Dashboard Overview" width="800" style="border-radius: 8px; margin-bottom: 10px;" />
   
   <p float="left">
-    <img src="./dashboard1.heic" alt="NLP Parsing Example" width="395" style="border-radius: 8px;" />
-    <img src="./login.heic" alt="Secure Login Flow" width="395" style="border-radius: 8px;" /> 
+    <img src="./dashboard1.jpg" alt="NLP Parsing Example" width="395" style="border-radius: 8px;" />
+    <img src="./login.jpg" alt="Secure Login Flow" width="395" style="border-radius: 8px;" /> 
   </p>
 </div>
 
