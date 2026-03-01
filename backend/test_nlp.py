@@ -1,5 +1,5 @@
 import pytest
-from nlp_engine import parse_user_input
+from nlp_service import parse_user_input
 
 def test_diet_parsing():
     result = parse_user_input("ate 3 apples")
